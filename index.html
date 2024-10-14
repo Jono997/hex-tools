@@ -1,0 +1,68 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Hex Tools</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://jono997.github.io/common.css">
+        <meta content="Jono99's personal whybsite" property="og:title" />
+        <meta content="Hecks tools" property="og:description" />
+        <meta content="https://jono997.github.io" property="og:url" />
+        <meta content="https://jono997.github.io/icon.png" property="og:image" />
+        <meta content="#995f4a" data-react-helmet="true" name="theme-color" />
+        <style>
+            .main-wrapper {
+                width: 100%;
+            }
+            .convert-options {
+                width: 100%;
+            }
+            textarea {
+                resize: none;
+                height: 40vh;
+            }
+            .convert-wrapper {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                grid-template-rows: auto 1fr;
+                column-gap: 0.5em;
+                row-gap: 0.5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div class="main-wrapper">
+            <main>
+                <h1>Hex Tools</h1>
+                <section>
+                    <h2>Convert</h2>
+                    <div class="convert-wrapper">
+                        <form style="grid-column: 1;">
+                            <label>From:</label>
+                            <select id="convert-from-format" class="convert-options"></select>
+                        </form>
+                        <form style="grid-column: 3;">
+                            <label>To:</label>
+                            <select id="convert-to-format" class="convert-options"></select>
+                        </form>
+                        
+                        <textarea id="convert-input"></textarea>
+                        <button style="margin: auto;">&lt;-&gt;</button>
+                        <textarea id="convert-output" readonly></textarea>
+                    </div>
+                </section>
+                <section>
+                    <a href="https://jono997.github.io/index.html">Exit</a>
+                </section>
+            </main>
+        </div>
+        <script preload src="https://jono997.github.io/common.js"></script>
+        <script src="hextools.js"></script>
+        <script>
+            window.addEventListener('load', function () {
+                window.background_path_prefix = "https://jono997.github.io/" + window.background_path_prefix;
+                window.change_background();
+            });
+        </script>
+    </body>
+</html>
